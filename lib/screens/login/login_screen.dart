@@ -6,6 +6,7 @@ import '../../widgets/buttons.dart';
 import '../../widgets/default_button.dart';
 import '../../widgets/navigation.dart';
 import '../home/home_screen.dart';
+import '../posts/posts_list_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -165,19 +166,13 @@ class _LoginScreenState extends State<LoginScreen> {
                   height: 5.0,
                 ),
                 MyButton(
-                  label: 'eslam button',
+                  label: 'Show Api Data',
                   isUpper: true,
-                  onTap: () async {
-                    final prefs = await SharedPreferences.getInstance();
-                    prefs.setString("email", email);
-                    if (formKey.currentState!.validate()) {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => HomePage(),
-                        ),
-                      );
-                    }
+                  onTap: ()  {
+                    navigateTo(
+                      context,
+                        const PostsList(),
+                    );
                   },
                 ),
 
