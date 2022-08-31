@@ -79,9 +79,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     }
                     return null;
                   },
-                  // onFieldSubmitted: (value) {
-                  //   email = value;
-                  // },
+                  
                   onChanged: (value) {
                     print(value);
                     email = value;
@@ -133,19 +131,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 const SizedBox(
                   height: 25.0,
                 ),
-                // ElevatedButton(
-                //   onPressed: () async {
-                //     final prefs = await SharedPreferences.getInstance();
-                //     prefs.setString("email", email);
-                //     Navigator.push(
-                //       context,
-                //       MaterialPageRoute(
-                //         builder: (context) => HomePage(),
-                //       ),
-                //     );
-                //   },
-                //   child: const Text('login'),
-                // ),
+            
                 MyButton(
                   label: 'Login',
                   isUpper: true,
@@ -176,52 +162,6 @@ class _LoginScreenState extends State<LoginScreen> {
                   },
                 ),
 
-                // defaultButton(
-                //   label: 'login',
-                //   isUpper: true,
-                //   formKey: formKey,
-                //   onPressed: () async {
-                //     final prefs = await SharedPreferences.getInstance();
-                //     prefs.setString("email", email);
-                //     // navigateTo(
-                //     //   context,
-                //     //   HomePage(),
-                //     // );
-                //   },
-                // ),
-                // Container(
-                //   width: 350,
-                //   decoration: BoxDecoration(
-                //     color: Colors.blue[300],
-                //     borderRadius: BorderRadius.circular(10.0),
-                //     boxShadow: [
-                //       BoxShadow(
-                //         color: Colors.black.withOpacity(0.50),
-                //         offset: const Offset(0.0, 1.0),
-                //         blurRadius: 4.0,
-                //         spreadRadius: 1.0,
-                //       ),
-                //     ],
-                //   ),
-                //   child: MaterialButton(
-                //     onPressed: () {
-                //       if (formKey.currentState!.validate()) {
-                //         Navigator.push(context,MaterialPageRoute(
-                //           builder: (context) => const HomePage(),
-                //         ),
-                //         );
-                //       }
-                //     },
-                //     child: const Text(
-                //       'Log In',
-                //       style: TextStyle(
-                //         color: Colors.white,
-                //         fontSize: 20.0,
-                //         fontWeight: FontWeight.w500,
-                //       ),
-                //     ),
-                //   ),
-                // ),
                 const SizedBox(
                   height: 10.0,
                 ),
